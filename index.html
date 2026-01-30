@@ -1,1 +1,78 @@
-test
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo Plumbing — Service Requests</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#0b0d10;color:#e9eef5}
+    .wrap{max-width:820px;margin:0 auto;padding:28px}
+    .card{background:#141821;border:1px solid #273043;border-radius:14px;padding:22px}
+    h1{margin:0 0 8px;font-size:28px}
+    p{line-height:1.5;color:#c9d4e5}
+    label{display:block;margin:10px 0 6px}
+    input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #2a344a;background:#0f131a;color:#e9eef5}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .btn{margin-top:14px;display:inline-block;background:#2f6fed;color:#fff;border:none;border-radius:10px;padding:12px 16px;font-weight:700;cursor:pointer}
+    .fine{font-size:12px;color:#a8b6cf;margin-top:10px}
+    a{color:#9fc0ff}
+    .footer{margin-top:16px;font-size:13px;color:#a8b6cf}
+    .badge{display:inline-block;background:#20304d;border:1px solid #2a3c63;color:#cfe0ff;padding:4px 10px;border-radius:999px;font-size:12px;margin-bottom:10px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="badge">Public Demo Site</div>
+      <h1>DEMO PLUMBING</h1>
+      <p>
+        Fast scheduling for plumbing service & estimates. Contact us and we’ll confirm by text.
+      </p>
+
+      <p><strong>Contact</strong><br>
+        Phone: (YOUR PHONE)<br>
+        Email: YOUR EMAIL<br>
+        Address: YOUR ADDRESS (City, State)
+      </p>
+
+      <h2 style="margin-top:18px;">Request Service</h2>
+      <form>
+        <div class="row">
+          <div>
+            <label>Full Name</label>
+            <input type="text" placeholder="Jane Smith" required>
+          </div>
+          <div>
+            <label>Mobile Number</label>
+            <input type="tel" placeholder="(555) 555-5555" required>
+          </div>
+        </div>
+
+        <label>What’s going on?</label>
+        <textarea rows="4" placeholder="Leaking sink, clogged drain, no hot water..." required></textarea>
+
+        <label style="margin-top:12px;">
+          <input type="checkbox" required style="width:auto;margin-right:8px;">
+          I agree to receive SMS messages from Demo Plumbing about my service request (appointment confirmations, reminders, and service updates).
+          Message & data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help.
+        </label>
+
+        <p class="fine">
+          By submitting, you confirm this number belongs to you and you consent to receive texts related to your request.
+          See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.
+        </p>
+
+        <button class="btn" type="button">Submit Request</button>
+        <div class="footer">
+          Note: This demo site does not use purchased, rented, or affiliate lead lists.
+        </div>
+      </form>
+    </div>
+
+    <p class="fine" style="margin-top:14px;">
+      © <span id="y"></span> Demo Plumbing
+    </p>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
